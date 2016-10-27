@@ -12,7 +12,7 @@ The other python files create the triangulation data structure and define the
 generic basis elements; these files are simply imported in the usual way in
  python
 
-
+NumPy is required.
 
 If you want to run the file you will need to uncomment some print and plot
  statements in the main file. 
