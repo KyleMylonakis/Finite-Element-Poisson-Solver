@@ -15,7 +15,9 @@ in the for loop, it generates an approximate solution to the variational problem
 To see the exponent of the rate of error decrease as the mesh size is included have the for loop iterate over more than one element, and uncomment the code at the end of the main file and comment out the following code
 
 ax = Axes3D(plt.gcf())
+
 ax.scatter(lagrange_points[:,0],lagrange_points[:,1],full_solution,zdir = 'z')
+
 plt.show()
 
 located at lines 230-232 instead.
