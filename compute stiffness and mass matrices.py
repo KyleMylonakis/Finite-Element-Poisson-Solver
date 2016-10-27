@@ -23,9 +23,9 @@ def analytic_soln(x,y):
 
 
 
-
-for n in range(10,11):
-    #n=2 # Set as an integer
+# n is 1 over the lattice constant. 2n^2 is the number of triangles in the mesh
+# n must be an integer
+for n in range(3,5):
     #print tri.InverseMeshConstant(n)[0]
     
     lagrange_points = []        
@@ -256,8 +256,8 @@ sup_rate = np.polyfit(np.array(log_node_spacing_box), np.array(log_sup_error_box
 elltwo_rate = np.polyfit(np.array(log_node_spacing_box), np.array(log_elltwo_error_box), 1)[0]
 
     
-#print sup_rate
-#print elltwo_rate
+#print "The Sup Convergence Exponent is ", sup_rate
+#print "The L2 Convergence Exponent is ", elltwo_rate
 
 #plt.plot(log_node_spacing_box,log_sup_error_box)    
 #plt.plot(log_node_spacing_box,log_elltwo_error_box)
