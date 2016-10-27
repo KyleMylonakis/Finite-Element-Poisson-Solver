@@ -9,6 +9,13 @@ The other python files create the triangulation data structure and define the ge
 
 SciPy and NumPy are required.
 
-If you want to run the file you will need to uncomment some print and plot statements in the main file. 
-Moreover the first for loop in the main file indexes over the inverse of the lattice constant, in the sense that at stage n
+Moreover the first for loop in the main file indexes over n, which is the inverse of the lattice constant. In stage n
 in the for loop, it generates an approximate solution to the variational problem for a uniform triangulation of the square with 2n^2 triangles.
+
+To see the exponent of the rate of error decrease as the mesh size is included have the for loop iterate over more than one element, and uncomment the code at the end of the main file and comment out the following code
+
+ax = Axes3D(plt.gcf())
+ax.scatter(lagrange_points[:,0],lagrange_points[:,1],full_solution,zdir = 'z')
+plt.show()
+
+located at lines 230-232 instead.
