@@ -24,7 +24,7 @@ def analytic_soln(x,y):
 
 
 
-for n in range(26,27):
+for n in range(10,11):
     #n=2 # Set as an integer
     #print tri.InverseMeshConstant(n)[0]
     
@@ -213,7 +213,7 @@ for n in range(26,27):
         elltwo_error += ((analytic_soln(lagrange_points[i][0],lagrange_points[i][1]) - full_solution[i])**2/float(2*n**2))
     elltwo_error = elltwo_error**0.5
     elltwo_error_box.append(elltwo_error)
-    print elltwo_error
+    print "The L2 Error is ", elltwo_error
         
     
     # Sup Error
@@ -223,12 +223,13 @@ for n in range(26,27):
         sup_bowl.append(abs(analytic_soln(nonzero_lagrange_points[i][0],nonzero_lagrange_points[i][1]) - solution[i]))
     sup_error = max(sup_bowl)
     sup_error_box.append(sup_error)
-    print sup_error
+    print "The sup Error is ", sup_error
     
     node_spacing_box.append(1/float(n))
 
-#ax.scatter(lagrange_points[:,0],lagrange_points[:,1],full_solution,zdir = 'z')
-#plt.show()
+ax = Axes3D(plt.gcf())
+ax.scatter(lagrange_points[:,0],lagrange_points[:,1],full_solution,zdir = 'z')
+plt.show()
 
 log_node_spacing_box = []
 for i in node_spacing_box:
