@@ -12,7 +12,7 @@ SciPy and NumPy are required.
 Moreover the first for loop in the main file indexes over n, which is the inverse of the lattice constant. In stage n
 in the for loop, it generates an approximate solution to the variational problem for a uniform triangulation of the square with 2n^2 triangles.
 
-To see the exponent of the rate of error decrease as the mesh size is included have the for loop iterate over more than one element, and uncomment the code at the end of the main file and comment out the following code
+To see the exponent of the rate of error decrease as the mesh refines is included have the for loop iterate over more than one element, and uncomment the code at the end of the main file and comment out the following code
 
 ax = Axes3D(plt.gcf())
 
